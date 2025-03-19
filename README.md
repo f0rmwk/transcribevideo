@@ -2,7 +2,7 @@
 Transcribe Speech from Audio &amp; Video using Whisper
 Requirements:
 
-ffmpeg.exe must be in the same folder as transcribevideo.
+If FFmpeg is not installed then <b>ffmpeg.exe must be in the same folder as transcribevideo.</b>
 
 Supported File Formats
 You can transcribe the following file types:
@@ -15,33 +15,34 @@ How to build a standalone .EXE from transcodevideo.py
 
 1) Create and Activate a Python Virtual Environment
 
-   cd "C:\path\to\project"
+   ```cd "C:\path\to\project"
    python -m venv venv
    .\venv\Scripts\activate
+   ```
+3) Install Dependencies
 
-2) Install Dependencies
-
-   pip install torch==2.0.1+cpu torchaudio==2.0.1+cpu -f https://download.pytorch.org/whl/cpu
+   ```pip install torch==2.0.1+cpu torchaudio==2.0.1+cpu -f https://download.pytorch.org/whl/cpu
    pip install openai-whisper
    pip install pyinstaller
+   ```
+4) Confirm transcodevideo.py Works
 
-3) Confirm transcodevideo.py Works
-
+   ```
    python .\transcodevideo.py
-   # If the program runs successfully, continue.
+   ```
+   
+5) Place ffmpeg.exe in the same folder as transcodevideo.py
 
-4) Place ffmpeg.exe in the same folder as transcodevideo.py
-
-5) Find Whisper's "assets" Folder
+6) Find Whisper's "assets" Folder
    It is usually in:
+   ```
    C:\path\to\project\venv\Lib\site-packages\whisper\assets
+8) Run PyInstaller
 
-6) Run PyInstaller
-
-   pyinstaller --onefile transcodevideo.py ^
+   ```pyinstaller --onefile transcodevideo.py ^
        --add-data "C:\path\to\project\venv\Lib\site-packages\whisper\assets;whisper/assets" ^
        --add-binary "ffmpeg.exe;."
-
+   ```
    Explanation:
    - --onefile : produce a single .exe
    - --add-data : bundle Whisper's "assets" folder
