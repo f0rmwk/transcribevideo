@@ -10,6 +10,8 @@ You can transcribe the following file types:
 Video: .mp4, .mov, .mkv, .avi
 Audio: .mp3, .wav, .flac, .aac, .m4a
 
+Currently only English is supported. Whisper does support many languages.
+
 How to build a standalone .EXE from transcodevideo.py
 -----------------------------------------------------
 
