@@ -2,7 +2,7 @@
 Transcribe Speech from Audio &amp; Video using Whisper
 Requirements:
 
-ffmpeg.exe must be in the same folder as 'Transcribe Video by wek.exe'.
+ffmpeg.exe must be in the same folder as 'transcribevideo.exe'.
 
 Supported File Formats
 You can transcribe the following file types:
