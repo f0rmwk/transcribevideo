@@ -1,16 +1,33 @@
 # transcribevideo
 Transcribe Speech from Audio &amp; Video using Whisper
+<br>
+
 Requirements:
+<br>
 
-If FFmpeg is not installed then <b>ffmpeg.exe must be in the same folder as transcribevideo.</b>
 
-Supported File Formats
+FFmpeg installed<br>or<br><b>ffmpeg.exe must be in the same folder as transcribevideo.</b>
+<br>
+
+
+
+
+
+<br>
 You can transcribe the following file types:
 
+<br>
+<br>
 Video: .mp4, .mov, .mkv, .avi
-Audio: .mp3, .wav, .flac, .aac, .m4a
 
-Currently only English is supported. Whisper does support many languages.
+<br>
+Audio: .mp3, .wav, .flac, .aac, .m4a
+<br><br>
+
+
+The code forces English to avoid mistaken language detection. Although, Whisper does support many languages.
+
+<br>
 
 How to build a standalone .EXE from transcodevideo.py
 -----------------------------------------------------
