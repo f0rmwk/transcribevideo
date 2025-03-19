@@ -10,7 +10,7 @@ You can transcribe the following file types:
 Video: .mp4, .mov, .mkv, .avi
 Audio: .mp3, .wav, .flac, .aac, .m4a
 
-HOW TO BUILD A STANDALONE .EXE FROM transcodevideo.py
+How to build a standalone .EXE from transcodevideo.py
 -----------------------------------------------------
 
 1) Create and Activate a Python Virtual Environment
