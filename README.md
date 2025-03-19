@@ -10,6 +10,43 @@ You can transcribe the following file types:
 Video: .mp4, .mov, .mkv, .avi
 Audio: .mp3, .wav, .flac, .aac, .m4a
 
+HOW TO BUILD A STANDALONE .EXE FROM transcodevideo.py
+-----------------------------------------------------
+
+1) Create and Activate a Python Virtual Environment
+
+   cd "C:\path\to\project"
+   python -m venv venv
+   .\venv\Scripts\activate
+
+2) Install Dependencies
+
+   pip install torch==2.0.1+cpu torchaudio==2.0.1+cpu -f https://download.pytorch.org/whl/cpu
+   pip install openai-whisper
+   pip install pyinstaller
+
+3) Confirm transcodevideo.py Works
+
+   python .\transcodevideo.py
+   # If the program runs successfully, continue.
+
+4) Place ffmpeg.exe in the same folder as transcodevideo.py
+
+5) Find Whisper's "assets" Folder
+   It is usually in:
+   C:\path\to\project\venv\Lib\site-packages\whisper\assets
+
+6) Run PyInstaller
+
+   pyinstaller --onefile transcodevideo.py ^
+       --add-data "C:\path\to\project\venv\Lib\site-packages\whisper\assets;whisper/assets" ^
+       --add-binary "ffmpeg.exe;."
+
+   Explanation:
+   - --onefile : produce a single .exe
+   - --add-data : bundle Whisper's "assets" folder
+   - --add-binary : bundle ffmpeg.exe
+
 f0rm - 03/19/2025
 
 openai/whisper is licensed under the:
