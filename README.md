@@ -41,7 +41,7 @@ https://github.com/openai/whisper
 ### FFmpeg Licensing Information
 
 This software includes FFmpeg, which is licensed under the **LGPL v2.1 or later**.  
-The full FFmpeg license can be found in `LICENSE.txt` in this folder.  
+The full FFmpeg license can be found in 3rd-party-licenses/FFmpeg-LICENSE.  
 
 You can obtain the source code and more information from the official FFmpeg website:  
 ➡ **https://ffmpeg.org/** 
