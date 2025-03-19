@@ -14,14 +14,14 @@ How to build a standalone .EXE from transcodevideo.py
 -----------------------------------------------------
 
 1) Create and Activate a Python Virtual Environment
-
-   ```cd "C:\path\to\project"
+   ```
+   cd "C:\path\to\project"
    python -m venv venv
    .\venv\Scripts\activate
    ```
 3) Install Dependencies
-
-   ```pip install torch==2.0.1+cpu torchaudio==2.0.1+cpu -f https://download.pytorch.org/whl/cpu
+   ```
+   pip install torch==2.0.1+cpu torchaudio==2.0.1+cpu -f https://download.pytorch.org/whl/cpu
    pip install openai-whisper
    pip install pyinstaller
    ```
@@ -38,8 +38,8 @@ How to build a standalone .EXE from transcodevideo.py
    ```
    C:\path\to\project\venv\Lib\site-packages\whisper\assets
 8) Run PyInstaller
-
-   ```pyinstaller --onefile transcodevideo.py ^
+   ```
+   pyinstaller --onefile transcodevideo.py ^
        --add-data "C:\path\to\project\venv\Lib\site-packages\whisper\assets;whisper/assets" ^
        --add-binary "ffmpeg.exe;."
    ```
